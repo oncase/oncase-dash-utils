@@ -339,8 +339,8 @@ define(["cdf/lib/jquery", CONTEXT_PATH + 'api/repos/pentaho-cdf/js/lib/CCC/proto
     function _configChart(chart, options) {
 
         var options = typeof options !== 'object' ? {} : options,
-            linesHidden = typeof options.linesHidden === undefined ? false : options.linesHidden,
-            extensionPoints = typeof options.extensionPoints === undefined ? [] : options.extensionPoints,
+            linesHidden = typeof options.linesHidden === 'undefined' ? false : options.linesHidden,
+            extensionPoints = typeof options.extensionPoints === 'undefined' ? [] : options.extensionPoints,
             def = chart.chartDefinition;
 
         if (linesHidden) {
